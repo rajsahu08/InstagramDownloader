@@ -26,6 +26,10 @@ let getVideo=async (url)=>{
 	    const videoElement = document.getElementById('myVid');
         let videoSRC=result.data.video_url;
         videoElement.src = videoSRC;
+        const msg=document.querySelector('.msg');
+        if(videoSRC!=""){
+        msg.style.display="block";
+        }
     } catch (error) {
 	    console.error(error);
     }
