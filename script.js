@@ -26,12 +26,6 @@ let getVideo=async (url)=>{
 	    const videoElement = document.getElementById('myVid');
         let videoSRC=result.data.video_url;
         videoElement.src = videoSRC;
-        saveButton.addEventListener('click', () => {
-            const link = document.createElement('a');
-            link.href = videoSRC;
-            link.download = 'InstagramDownloaderVideo.mp4';
-            link.click();
-        });
     } catch (error) {
 	    console.error(error);
     }
